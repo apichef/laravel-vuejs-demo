@@ -24,9 +24,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    @auth
+                        <ul class="navbar-nav mr-auto">
+                            <li><a class="nav-link" href="{{ route('wall') }}">wall</a></li>
+                            <li><a class="nav-link" href="{{ route('my-posts') }}">my posts</a></li>
+                            <li><a class="nav-link" href="{{ route('write') }}">write</a></li>
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -60,6 +64,13 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="text-center">
+            <small class="text-muted">
+                <p>Designed and built with all the love in the world by <a href="https://twitter.com/@milroyfraser">@milroyfraser</a></p>
+                <p>Code licensed <a href="https://github.com/milroyfraser/sarala-demo/blob/master/LICENSE">MIT</a></p>
+            </small>
+        </footer>
     </div>
 
     <!-- Scripts -->
