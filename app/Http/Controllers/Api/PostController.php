@@ -17,7 +17,11 @@ class PostController extends Controller
             $query->with(explode(',', $request->get('include')));
         }
 
-        $posts = $query->paginate($request->input('page.size'), null, null, $request->input('page.number'));
+        if ($request->filled('page')) {
+            $posts = $query->paginate($request->input('page.size'), null, null, $request->input('page.number'));
+        } else {
+            $posts = $query->get();
+        }
 
         return fractal($posts, new PostTransformer())
             ->withResourceName('posts')
@@ -29,8 +33,6 @@ class PostController extends Controller
         if ($request->filled('include')) {
             $post->load(explode(',', $request->get('include')));
         }
-
-        dd($post->toArray());
 
         return fractal($post, new PostTransformer())
             ->withResourceName('posts')

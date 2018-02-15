@@ -14,7 +14,7 @@ class CommentTransformer extends TransformerAbstract
         return [
             'id' => (int) $comment->id,
             'body' => $comment->body,
-            'commented_at' => $comment->created_at->toDateString(),
+            'created_at' => $comment->created_at->toDateString(),
         ];
     }
 
