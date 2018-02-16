@@ -6,7 +6,7 @@ window.Vue = require('vue');
 
 Vue.use(Element);
 
-Vue.component('posts-list', require('./components/posts/PostsList.vue'));
+Vue.component('wall', require('./components/pages/Wall.vue'));
 
 const app = new Vue({
     el: '#app'
