@@ -108755,7 +108755,7 @@ var post = new __WEBPACK_IMPORTED_MODULE_1__models_Post__["a" /* default */]();
             posts: [],
             pagination: {
                 total: 0,
-                per_page: 4
+                per_page: 2
             },
             loading: true
         };
