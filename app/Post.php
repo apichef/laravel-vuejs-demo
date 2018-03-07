@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+use Sarala\Filterable;
 
 class Post extends Model
 {
+    use Filterable;
+
     protected $fillable = ['title', 'subtitle', 'body', 'published_at'];
 
     protected $dates = ['published_at'];
@@ -28,5 +32,10 @@ class Post extends Model
     public function author()
     {
         return $this->belongsTo(User::class, 'author_id', 'id');
+    }
+
+    public function scopeComposedBy(Builder $builder, User $user)
+    {
+        return $builder->where('author_id', $user->id);
     }
 }

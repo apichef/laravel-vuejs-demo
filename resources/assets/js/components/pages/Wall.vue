@@ -43,7 +43,10 @@
             async fetchPosts (page) {
                 this.loading = true;
 
-                const result = await post.with(['author', 'tags']).paginate(this.pagination.per_page, page);
+                const result = await post.with(['author', 'tags'])
+                    .orderByDesc('published_at')
+                    .paginate(this.pagination.per_page, page);
+
                 this.posts = result.data;
                 this.pagination = result.meta.pagination;
 

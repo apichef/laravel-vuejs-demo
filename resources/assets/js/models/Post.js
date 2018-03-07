@@ -39,4 +39,8 @@ export default class Post extends Model {
             }
         };
     }
+
+    navigateToEditPage () {
+        window.location.href = `/admin/post/${this.id}/edit`;
+    }
 }

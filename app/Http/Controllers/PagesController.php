@@ -19,7 +19,7 @@ class PagesController extends Controller
 
     public function myPosts()
     {
-        return view('post.list');
+        return view('post.manage');
     }
 
     public function write()
