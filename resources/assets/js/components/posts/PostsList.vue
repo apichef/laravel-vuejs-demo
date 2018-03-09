@@ -1,6 +1,6 @@
 <template>
     <article>
-        <div v-for="post in posts" :key="post.id" class="card mb-4">
+        <div v-for="post in posts" :key="post.id" class="card cool-shadow mb-4">
             <div class="card-body">
                 <a :href="post.url"><h2 class="card-title">{{ post.title }}</h2></a>
                 <blockquote class="blockquote mb-0">
