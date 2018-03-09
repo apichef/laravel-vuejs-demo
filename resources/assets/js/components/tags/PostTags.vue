@@ -2,19 +2,8 @@
     <section>
         <label>Tags</label>
         <br>
-        <el-select
-            @change="change"
-            v-model="selectedTags"
-            value-key="id"
-            multiple
-            filterable
-            placeholder="Choose tags for your article">
-            <el-option
-                v-for="tag in tags"
-                :key="tag.id"
-                :label="tag.name"
-                :value="tag">
-            </el-option>
+        <el-select @change="change" v-model="selectedTags" value-key="id" placeholder="Choose tags for your article" multiple filterable>
+            <el-option v-for="tag in tags" :key="tag.id" :label="tag.name" :value="tag"></el-option>
         </el-select>
     </section>
 </template>
@@ -22,8 +11,8 @@
 <script>
     import _ from 'lodash';
 
-    import Tag from '../models/Tag';
-    import Post from '../models/Post';
+    import Tag from './../../models/Tag';
+    import Post from './../../models/Post';
 
     let tag = new Tag();
     let post = new Post();
