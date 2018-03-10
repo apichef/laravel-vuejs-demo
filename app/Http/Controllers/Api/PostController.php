@@ -25,6 +25,13 @@ class PostController extends Controller
         return new JsonApiResponse($data, new PostTransformer(), 'posts');
     }
 
+    public function update(Request $request, Post $post)
+    {
+        $post->update($request->input('data.attributes'));
+
+        return response('', 204);
+    }
+
     public function destroy(Post $post)
     {
         $post->delete();

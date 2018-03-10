@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')->group(function () {
-    Route::apiResource('posts', 'PostController', ['only' => ['index', 'show', 'destroy']]);
+    Route::apiResource('posts', 'PostController', ['only' => ['index', 'show', 'update', 'destroy']]);
 });

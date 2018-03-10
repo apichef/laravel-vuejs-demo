@@ -4973,7 +4973,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #d4dbe6;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -4987,7 +4987,7 @@ tbody.collapse.show {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #d4dbe6;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -5733,9 +5733,9 @@ tbody.collapse.show {
 
 .list-group-item.active {
   z-index: 2;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #636b6f;
+  background-color: #f4f6f9;
+  border-color: #d4dbe6;
 }
 
 .list-group-flush .list-group-item {
@@ -14992,10 +14992,6 @@ a.text-dark:focus {
   display: block;
   -webkit-transform: translate(0, 0.5px);
           transform: translate(0, 0.5px);
-}
-
-.el-select .el-select-dropdown__wrap {
-  margin-bottom: 0 !important;
 }
 
 .el-pagination {
@@ -29652,10 +29648,6 @@ a.text-dark:focus {
   display: block;
   -webkit-transform: translate(0, 0.5px);
           transform: translate(0, 0.5px);
-}
-
-.el-select .el-select-dropdown__wrap {
-  margin-bottom: 0 !important;
 }
 
 /* Element Chalk Variables */
@@ -73269,6 +73261,8 @@ a.text-dark:focus {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /* BEM support Func
@@ -73460,6 +73454,8 @@ a.text-dark:focus {
   overflow: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /* BEM support Func
@@ -74188,6 +74184,8 @@ a.text-dark:focus {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .cool-shadow {

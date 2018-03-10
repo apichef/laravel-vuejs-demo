@@ -1,3 +1,11 @@
+// Colors
+$color-main: #465975;
+$color-main-lightest: lighten($color-main, 60%);
+$color-main-lighter: lighten($color-main, 50%);
+$color-main-light: lighten($color-main, 20%);
+$color-main-dark: darken($color-main, 20%);
+$color-main-darker: darken($color-main, 40%);
+$color-main-darkest: darken($color-main, 60%);
 
 // Body
 $body-bg: #f5f8fa;
@@ -21,3 +29,11 @@ $panel-default-heading-bg: #fff;
 $border-radius: 0 !default;
 $border-radius-lg: 0 !default;
 $border-radius-sm: 0 !default;
+
+// List Group
+$list-group-active-color: $text-color;
+$list-group-active-bg: $color-main-lightest;
+$list-group-active-border-color: $color-main-lighter;
+
+// Card
+$card-cap-bg: $color-main-lighter;
