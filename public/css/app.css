@@ -12340,7 +12340,7 @@ a.text-dark:focus {
   position: absolute;
   z-index: 1001;
   border: solid 1px #e4e7ed;
-  border-radius: 4px;
+  border-radius: 0;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
@@ -12768,7 +12768,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -12873,7 +12873,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13058,7 +13058,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -15680,7 +15680,7 @@ a.text-dark:focus {
   position: relative;
   margin: 0 auto 50px;
   background: #fff;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
@@ -16562,7 +16562,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -16667,7 +16667,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16852,7 +16852,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -17814,7 +17814,7 @@ a.text-dark:focus {
   margin: 5px 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-autocomplete-suggestion__wrap {
@@ -17825,7 +17825,7 @@ a.text-dark:focus {
   overflow: auto;
   background-color: #fff;
   border: 1px solid #e4e7ed;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-autocomplete-suggestion__list {
@@ -18789,7 +18789,7 @@ a.text-dark:focus {
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button + .el-button {
@@ -19207,7 +19207,7 @@ a.text-dark:focus {
 .el-button--medium {
   padding: 10px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button--medium.is-round {
@@ -19217,7 +19217,7 @@ a.text-dark:focus {
 .el-button--small {
   padding: 9px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--small.is-round {
@@ -19227,7 +19227,7 @@ a.text-dark:focus {
 .el-button--mini {
   padding: 7px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--mini.is-round {
@@ -19296,10 +19296,10 @@ a.text-dark:focus {
 }
 
 .el-button-group .el-button:first-child:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .el-button-group .el-button:not(:first-child):not(:last-child) {
@@ -19899,7 +19899,7 @@ a.text-dark:focus {
   margin: 5px 0;
   background-color: #fff;
   border: 1px solid #ebeef5;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -20504,7 +20504,7 @@ a.text-dark:focus {
   left: 100%;
   z-index: 10;
   border: 1px solid #e4e7ed;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -20519,7 +20519,7 @@ a.text-dark:focus {
   min-width: 200px;
   border: none;
   padding: 5px 0;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -21069,7 +21069,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -21174,7 +21174,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21359,7 +21359,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -22166,7 +22166,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -22271,7 +22271,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22456,7 +22456,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -22583,13 +22583,13 @@ a.text-dark:focus {
 
 .el-input-number__increase {
   right: 1px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
   border-left: 1px solid #dcdfe6;
 }
 
 .el-input-number__decrease {
   left: 1px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   border-right: 1px solid #dcdfe6;
 }
 
@@ -22688,7 +22688,7 @@ a.text-dark:focus {
 }
 
 .el-input-number.is-controls-right .el-input-number__increase {
-  border-radius: 0 4px 0 0;
+  border-radius: 0 0 0 0;
   border-bottom: 1px solid #dcdfe6;
 }
 
@@ -22699,7 +22699,7 @@ a.text-dark:focus {
   left: auto;
   border-right: none;
   border-left: 1px solid #dcdfe6;
-  border-radius: 0 0 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-input-number.is-controls-right[class*=medium] [class*=increase],
@@ -23259,7 +23259,7 @@ a.text-dark:focus {
 
 .el-radio.is-bordered {
   padding: 12px 20px 0 10px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -23281,7 +23281,7 @@ a.text-dark:focus {
 
 .el-radio--medium.is-bordered {
   padding: 10px 20px 0 10px;
-  border-radius: 4px;
+  border-radius: 0;
   height: 36px;
 }
 
@@ -23296,7 +23296,7 @@ a.text-dark:focus {
 
 .el-radio--small.is-bordered {
   padding: 8px 15px 0 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 32px;
 }
 
@@ -23311,7 +23311,7 @@ a.text-dark:focus {
 
 .el-radio--mini.is-bordered {
   padding: 6px 15px 0 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 28px;
 }
 
@@ -24411,17 +24411,17 @@ a.text-dark:focus {
 
 .el-radio-button:first-child .el-radio-button__inner {
   border-left: 1px solid #dcdfe6;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
 
 .el-radio-button:last-child .el-radio-button__inner {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-radio-button:first-child:last-child .el-radio-button__inner {
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-radio-button--medium .el-radio-button__inner {
@@ -25001,7 +25001,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered {
   padding: 9px 20px 9px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -25024,7 +25024,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--medium {
   padding: 7px 20px 7px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   height: 36px;
 }
 
@@ -25040,7 +25040,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--small {
   padding: 5px 15px 5px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 32px;
 }
 
@@ -25061,7 +25061,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--mini {
   padding: 3px 15px 3px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 28px;
 }
 
@@ -25177,7 +25177,7 @@ a.text-dark:focus {
   display: inline-block;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 14px;
@@ -25312,7 +25312,7 @@ a.text-dark:focus {
 
 .el-checkbox-button:first-child .el-checkbox-button__inner {
   border-left: 1px solid #dcdfe6;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -25322,7 +25322,7 @@ a.text-dark:focus {
 }
 
 .el-checkbox-button:last-child .el-checkbox-button__inner {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-checkbox-button--medium .el-checkbox-button__inner {
@@ -26996,7 +26996,7 @@ a.text-dark:focus {
   position: absolute;
   z-index: 1001;
   border: solid 1px #e4e7ed;
-  border-radius: 4px;
+  border-radius: 0;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
@@ -27424,7 +27424,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -27529,7 +27529,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -27714,7 +27714,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -30198,7 +30198,7 @@ a.text-dark:focus {
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button + .el-button {
@@ -30616,7 +30616,7 @@ a.text-dark:focus {
 .el-button--medium {
   padding: 10px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button--medium.is-round {
@@ -30626,7 +30626,7 @@ a.text-dark:focus {
 .el-button--small {
   padding: 9px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--small.is-round {
@@ -30636,7 +30636,7 @@ a.text-dark:focus {
 .el-button--mini {
   padding: 7px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--mini.is-round {
@@ -30705,10 +30705,10 @@ a.text-dark:focus {
 }
 
 .el-button-group .el-button:first-child:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .el-button-group .el-button:not(:first-child):not(:last-child) {
@@ -31520,7 +31520,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered {
   padding: 9px 20px 9px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31543,7 +31543,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--medium {
   padding: 7px 20px 7px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   height: 36px;
 }
 
@@ -31559,7 +31559,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--small {
   padding: 5px 15px 5px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 32px;
 }
 
@@ -31580,7 +31580,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--mini {
   padding: 3px 15px 3px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 28px;
 }
 
@@ -31696,7 +31696,7 @@ a.text-dark:focus {
   display: inline-block;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 14px;
@@ -31831,7 +31831,7 @@ a.text-dark:focus {
 
 .el-checkbox-button:first-child .el-checkbox-button__inner {
   border-left: 1px solid #dcdfe6;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -31841,7 +31841,7 @@ a.text-dark:focus {
 }
 
 .el-checkbox-button:last-child .el-checkbox-button__inner {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-checkbox-button--medium .el-checkbox-button__inner {
@@ -34333,7 +34333,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered {
   padding: 9px 20px 9px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -34356,7 +34356,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--medium {
   padding: 7px 20px 7px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   height: 36px;
 }
 
@@ -34372,7 +34372,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--small {
   padding: 5px 15px 5px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 32px;
 }
 
@@ -34393,7 +34393,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--mini {
   padding: 3px 15px 3px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 28px;
 }
 
@@ -34509,7 +34509,7 @@ a.text-dark:focus {
   display: inline-block;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 14px;
@@ -34644,7 +34644,7 @@ a.text-dark:focus {
 
 .el-checkbox-button:first-child .el-checkbox-button__inner {
   border-left: 1px solid #dcdfe6;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -34654,7 +34654,7 @@ a.text-dark:focus {
 }
 
 .el-checkbox-button:last-child .el-checkbox-button__inner {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-checkbox-button--medium .el-checkbox-button__inner {
@@ -38030,7 +38030,7 @@ a.text-dark:focus {
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
   line-height: 30px;
   margin: 5px 0;
 }
@@ -39341,7 +39341,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -39446,7 +39446,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -39631,7 +39631,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -42138,7 +42138,7 @@ a.text-dark:focus {
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
   line-height: 30px;
   margin: 5px 0;
 }
@@ -45017,7 +45017,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -45122,7 +45122,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -45307,7 +45307,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -48547,7 +48547,7 @@ a.text-dark:focus {
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button + .el-button {
@@ -48965,7 +48965,7 @@ a.text-dark:focus {
 .el-button--medium {
   padding: 10px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button--medium.is-round {
@@ -48975,7 +48975,7 @@ a.text-dark:focus {
 .el-button--small {
   padding: 9px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--small.is-round {
@@ -48985,7 +48985,7 @@ a.text-dark:focus {
 .el-button--mini {
   padding: 7px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--mini.is-round {
@@ -49054,10 +49054,10 @@ a.text-dark:focus {
 }
 
 .el-button-group .el-button:first-child:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .el-button-group .el-button:not(:first-child):not(:last-child) {
@@ -49518,7 +49518,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -49623,7 +49623,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -49808,7 +49808,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -53520,7 +53520,7 @@ a.text-dark:focus {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 0;
   position: relative;
   background-color: #fff;
   overflow: hidden;
@@ -55000,7 +55000,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -55105,7 +55105,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -55290,7 +55290,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -55417,13 +55417,13 @@ a.text-dark:focus {
 
 .el-input-number__increase {
   right: 1px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
   border-left: 1px solid #dcdfe6;
 }
 
 .el-input-number__decrease {
   left: 1px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   border-right: 1px solid #dcdfe6;
 }
 
@@ -55522,7 +55522,7 @@ a.text-dark:focus {
 }
 
 .el-input-number.is-controls-right .el-input-number__increase {
-  border-radius: 0 4px 0 0;
+  border-radius: 0 0 0 0;
   border-bottom: 1px solid #dcdfe6;
 }
 
@@ -55533,7 +55533,7 @@ a.text-dark:focus {
   left: auto;
   border-right: none;
   border-left: 1px solid #dcdfe6;
-  border-radius: 0 0 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-input-number.is-controls-right[class*=medium] [class*=increase],
@@ -56440,12 +56440,12 @@ a.text-dark:focus {
 .el-slider.is-vertical.el-slider--with-input .el-slider__input .el-input-number__decrease {
   width: 18px;
   right: 18px;
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 0;
 }
 
 .el-slider.is-vertical.el-slider--with-input .el-slider__input .el-input-number__increase {
   width: 19px;
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 0;
 }
 
 .el-slider.is-vertical.el-slider--with-input .el-slider__input .el-input-number__increase ~ .el-input .el-input__inner {
@@ -62915,7 +62915,7 @@ a.text-dark:focus {
   min-width: 380px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 0;
   border-width: 1px;
   border-style: solid;
   border-color: #ebeef5;
@@ -67607,7 +67607,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -67712,7 +67712,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -67897,7 +67897,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -68521,7 +68521,7 @@ a.text-dark:focus {
   margin: 5px 0;
   z-index: 2;
   border: solid 1px #e4e7ed;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -69262,7 +69262,7 @@ a.text-dark:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #999;
-  border-radius: 2px;
+  border-radius: 0;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -69311,7 +69311,7 @@ a.text-dark:focus {
           box-sizing: content-box;
   background-color: #fff;
   border: 1px solid #ebeef5;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
@@ -70046,7 +70046,7 @@ a.text-dark:focus {
   background-color: #fff;
   background-image: none;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -70151,7 +70151,7 @@ a.text-dark:focus {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -70336,7 +70336,7 @@ a.text-dark:focus {
   display: table-cell;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 0 20px;
   width: 1px;
   white-space: nowrap;
@@ -70961,7 +70961,7 @@ a.text-dark:focus {
   -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button + .el-button {
@@ -71379,7 +71379,7 @@ a.text-dark:focus {
 .el-button--medium {
   padding: 10px 20px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-button--medium.is-round {
@@ -71389,7 +71389,7 @@ a.text-dark:focus {
 .el-button--small {
   padding: 9px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--small.is-round {
@@ -71399,7 +71399,7 @@ a.text-dark:focus {
 .el-button--mini {
   padding: 7px 15px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: -1;
 }
 
 .el-button--mini.is-round {
@@ -71468,10 +71468,10 @@ a.text-dark:focus {
 }
 
 .el-button-group .el-button:first-child:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .el-button-group .el-button:not(:first-child):not(:last-child) {
@@ -72098,7 +72098,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered {
   padding: 9px 20px 9px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #dcdfe6;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -72121,7 +72121,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--medium {
   padding: 7px 20px 7px 10px;
-  border-radius: 4px;
+  border-radius: 0;
   height: 36px;
 }
 
@@ -72137,7 +72137,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--small {
   padding: 5px 15px 5px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 32px;
 }
 
@@ -72158,7 +72158,7 @@ a.text-dark:focus {
 
 .el-checkbox.is-bordered.el-checkbox--mini {
   padding: 3px 15px 3px 10px;
-  border-radius: 3px;
+  border-radius: -1;
   height: 28px;
 }
 
@@ -72274,7 +72274,7 @@ a.text-dark:focus {
   display: inline-block;
   position: relative;
   border: 1px solid #dcdfe6;
-  border-radius: 2px;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 14px;
@@ -72409,7 +72409,7 @@ a.text-dark:focus {
 
 .el-checkbox-button:first-child .el-checkbox-button__inner {
   border-left: 1px solid #dcdfe6;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -72419,7 +72419,7 @@ a.text-dark:focus {
 }
 
 .el-checkbox-button:last-child .el-checkbox-button__inner {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .el-checkbox-button--medium .el-checkbox-button__inner {
@@ -72477,7 +72477,7 @@ a.text-dark:focus {
 }
 
 .el-transfer__button.is-with-texts {
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .el-transfer__button.is-disabled {
@@ -72511,7 +72511,7 @@ a.text-dark:focus {
 
 .el-transfer-panel {
   border: 1px solid #ebeef5;
-  border-radius: 4px;
+  border-radius: 0;
   overflow: hidden;
   background: #fff;
   display: inline-block;
