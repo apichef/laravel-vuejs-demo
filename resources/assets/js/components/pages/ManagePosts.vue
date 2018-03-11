@@ -6,7 +6,7 @@
 
         <el-col :span="16">
             <post-form v-if="hasTargetPost" :post="targetPost"></post-form>
-            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" show-icon v-else></el-alert>
+            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" :class="'cool-shadow'" show-icon v-else></el-alert>
         </el-col>
     </el-row>
 </template>

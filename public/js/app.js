@@ -5153,7 +5153,7 @@ module.exports = {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.5.14
+ * Vue.js v2.5.15
  * (c) 2014-2018 Evan You
  * Released under the MIT License.
  */
@@ -7131,7 +7131,7 @@ function traverse (val) {
 function _traverse (val, seen) {
   var i, keys;
   var isA = Array.isArray(val);
-  if ((!isA && !isObject(val)) || Object.isFrozen(val)) {
+  if ((!isA && !isObject(val)) || Object.isFrozen(val) || val instanceof VNode) {
     return
   }
   if (val.__ob__) {
@@ -10236,7 +10236,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.5.14';
+Vue.version = '2.5.15';
 
 /*  */
 
@@ -112870,6 +112870,9 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -112892,6 +112895,12 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     },
 
 
+    watch: {
+        post: function post(_post) {
+            this.selectedPost = _post;
+        }
+    },
+
     methods: {
         save: function () {
             var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
@@ -112901,7 +112910,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             case 0:
                                 this.saving = true;
                                 _context.next = 3;
-                                return this.post.save();
+                                return this.selectedPost.save();
 
                             case 3:
                                 this.saving = false;
@@ -112974,6 +112983,24 @@ var render = function() {
                       _vm.$set(_vm.selectedPost, "subtitle", $$v)
                     },
                     expression: "selectedPost.subtitle"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "el-form-item",
+              { attrs: { label: "Date Published" } },
+              [
+                _c("el-date-picker", {
+                  attrs: { type: "date" },
+                  model: {
+                    value: _vm.selectedPost.published_at,
+                    callback: function($$v) {
+                      _vm.$set(_vm.selectedPost, "published_at", $$v)
+                    },
+                    expression: "selectedPost.published_at"
                   }
                 })
               ],
@@ -113245,7 +113272,7 @@ var post = new __WEBPACK_IMPORTED_MODULE_2__models_Post__["a" /* default */]();
             posts: [],
             pagination: {
                 total: 0,
-                per_page: 8,
+                per_page: 4,
                 total_pages: 1
             }
         };
@@ -113334,6 +113361,7 @@ var render = function() {
         { staticClass: "list-group-item" },
         [
           _c("el-input", {
+            class: "cool-shadow",
             attrs: {
               placeholder: "Search ...",
               "suffix-icon": "el-icon-search"
@@ -113432,6 +113460,7 @@ var render = function() {
           _vm.hasTargetPost
             ? _c("post-form", { attrs: { post: _vm.targetPost } })
             : _c("el-alert", {
+                class: "cool-shadow",
                 attrs: {
                   title: "Select a post from left side panel to make changes.",
                   type: "info",

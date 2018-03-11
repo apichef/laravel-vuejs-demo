@@ -11,6 +11,9 @@
                 <el-form-item label="Subtitle">
                     <el-input type="textarea" v-model="selectedPost.subtitle"></el-input>
                 </el-form-item>
+                <el-form-item label="Date Published">
+                    <el-date-picker type="date" v-model="selectedPost.published_at"></el-date-picker>
+                </el-form-item>
                 <el-form-item label="Body">
                     <el-input type="textarea" v-model="selectedPost.body" :rows="10"></el-input>
                 </el-form-item>
@@ -42,10 +45,16 @@
             this.selectedPost = this.post;
         },
 
+        watch: {
+            post (post) {
+                this.selectedPost = post;
+            }
+        },
+
         methods: {
             async save () {
                 this.saving = true;
-                await this.post.save();
+                await this.selectedPost.save();
                 this.saving = false;
             }
         }

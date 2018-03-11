@@ -2,7 +2,7 @@
     <section class="cool-shadow posts-list">
         <div class="search list-group list-group-flush">
             <div class="list-group-item">
-                <el-input placeholder="Search ..." v-model="query" suffix-icon="el-icon-search"></el-input>
+                <el-input placeholder="Search ..." v-model="query" suffix-icon="el-icon-search" :class="'cool-shadow'"></el-input>
             </div>
         </div>
         <div class="list list-group list-group-flush">
