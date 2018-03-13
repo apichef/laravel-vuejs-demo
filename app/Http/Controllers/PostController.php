@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Support\Facades\DB;
 use Sarala\JsonApiResponse;
 use Illuminate\Http\Request;
 use App\Filters\PostsFilter;
-use App\Http\Controllers\Controller;
 use App\Http\Transformers\PostTransformer;
 
 class PostController extends Controller

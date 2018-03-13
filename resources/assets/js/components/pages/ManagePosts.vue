@@ -5,7 +5,7 @@
         </el-col>
 
         <el-col :span="16">
-            <post-form v-if="hasTargetPost" :post="targetPost"></post-form>
+            <post-form v-if="hasTargetPost" :post="targetPost" @destroyed="destroyed"></post-form>
             <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" :class="'cool-shadow'" show-icon v-else></el-alert>
         </el-col>
     </el-row>
@@ -36,6 +36,10 @@
         methods: {
             selectPost (post) {
                 this.targetPost = post;
+            },
+
+            destroyed (post) {
+                this.targetPost = {};
             }
         }
     }

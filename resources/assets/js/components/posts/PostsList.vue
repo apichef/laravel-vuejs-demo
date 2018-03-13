@@ -1,6 +1,10 @@
 <template>
     <article>
-        <post-summery v-for="post in posts" :key="post.id" :post="post"></post-summery>
+        <div v-for="post in posts" :key="post.id" class="card cool-shadow mb-4">
+            <div class="card-body">
+                <post-summery :post="post"></post-summery>
+            </div>
+        </div>
     </article>
 </template>
 

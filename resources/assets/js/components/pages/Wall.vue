@@ -44,6 +44,7 @@
                 this.loading = true;
 
                 const result = await post.with(['author', 'tags'])
+                    .filter('published')
                     .orderByDesc('published_at')
                     .paginate(this.pagination.per_page, page);
 

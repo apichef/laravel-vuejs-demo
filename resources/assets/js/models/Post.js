@@ -1,3 +1,4 @@
+import moment from 'moment';
 import Model from './BaseModel';
 import Comment from "./Comment";
 import Tag from "./Tag";
@@ -38,6 +39,10 @@ export default class Post extends Model {
 
             url (post) {
                 return `/read/${post.slug}/${post.id}`;
+            },
+
+            is_published (post) {
+                return post.published_at.isSameOrBefore(moment())
             }
         };
     }

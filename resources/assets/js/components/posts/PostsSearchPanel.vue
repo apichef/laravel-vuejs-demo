@@ -7,10 +7,7 @@
         </div>
         <div class="list list-group list-group-flush">
             <div class="list-group-item" v-for="post in posts" :key="post.id" @click.prevent="selectPost(post)" :class="{ active: post.id === targetPost.id }">
-                <p class="card-title">{{ post.title }}</p>
-                <blockquote class="blockquote mb-0">
-                    <footer class="blockquote-footer"><cite title="Source Title"> on {{ post.full_date }}</cite></footer>
-                </blockquote>
+                <post-summery :post="post"></post-summery>
             </div>
             <infinite-loading @infinite="fetchPosts"></infinite-loading>
         </div>
@@ -52,6 +49,7 @@
     import _ from 'lodash';
     import Post from './../../models/Post';
     import InfiniteLoading from 'vue-infinite-loading';
+    import PostSummery from './PostSummery.vue';
 
     const post = new Post();
 
@@ -77,7 +75,8 @@
         },
 
         components: {
-            InfiniteLoading
+            InfiniteLoading,
+            PostSummery
         },
 
         methods: {

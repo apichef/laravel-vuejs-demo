@@ -17,8 +17,9 @@
                 <el-form-item label="Body">
                     <el-input type="textarea" v-model="selectedPost.body" :rows="10"></el-input>
                 </el-form-item>
-                <el-form-item>
-                    <el-button type="success" @click="save">Save</el-button>
+                <el-form-item class="m-0">
+                    <el-button type="success" :loading="saving" @click="save">Save</el-button>
+                    <el-button type="danger" :loading="destroying" @click="confirmDestroy">Delete</el-button>
                 </el-form-item>
             </el-form>
         </div>
@@ -30,7 +31,8 @@
         data () {
             return {
                 selectedPost: {},
-                saving: false
+                saving: false,
+                destroying: false
             };
         },
 
@@ -56,6 +58,25 @@
                 this.saving = true;
                 await this.selectedPost.save();
                 this.saving = false;
+            },
+
+            async confirmDestroy () {
+                try {
+                    this.destroying = true;
+                    await this.$confirm('This will permanently delete the post. Continue?', {
+                        confirmButtonClass: 'el-button--danger',
+                        type: 'Warning'
+                    });
+                    this.destroy();
+                } catch (e) {
+                    this.destroying = false;
+                }
+            },
+
+            async destroy () {
+                await this.selectedPost.delete();
+                this.destroying = false;
+                this.$emit('destroyed', this.selectedPost);
             }
         }
     }
