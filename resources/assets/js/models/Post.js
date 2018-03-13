@@ -37,7 +37,7 @@ export default class Post extends Model {
             },
 
             url (post) {
-                return `/${post.slug}/${post.id}`;
+                return `/read/${post.slug}/${post.id}`;
             }
         };
     }

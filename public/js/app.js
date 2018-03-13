@@ -113272,7 +113272,7 @@ var post = new __WEBPACK_IMPORTED_MODULE_2__models_Post__["a" /* default */]();
             posts: [],
             pagination: {
                 total: 0,
-                per_page: 4,
+                per_page: 8,
                 total_pages: 1
             }
         };
