@@ -2,14 +2,22 @@
     <el-row :gutter="20">
 
         <el-col :span="8">
-            <search></search>
-            <search-result :posts="posts" :active-post="activePost" @selected="selectPost">
+            <filters></filters>
+
+            <results :posts="posts" :active-post="activePost" @selected="selectPost">
                 <infinite-loading @infinite="fetchPosts"></infinite-loading>
-            </search-result>
+            </results>
         </el-col>
 
         <el-col :span="16">
-            <post-form v-if="hasActivePost" :post="activePost" @destroyed="destroyed"></post-form>
+            <el-tabs v-if="hasActivePost" type="border-card" :class="'cool-shadow'">
+                <el-tab-pane label="Preview">
+                    <show :post="activePost"></show>
+                </el-tab-pane>
+                <el-tab-pane label="Edit Post">
+                    <post-form :post="activePost" @deleted="deleted" @saved="saved"></post-form>
+                </el-tab-pane>
+            </el-tabs>
             <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" :class="'cool-shadow'" show-icon v-else></el-alert>
         </el-col>
 
@@ -19,9 +27,10 @@
 <script>
     import _ from 'lodash';
     import Post from './../../models/Post';
-    import Search from './../posts/Search.vue';
-    import PostForm from './../posts/PostForm.vue';
-    import SearchResult from '../posts/SearchResult.vue';
+    import Show from './../posts/Show.vue';
+    import PostForm from './../posts/Form.vue';
+    import Filters from './../posts/search/Filters.vue';
+    import Results from './../posts/search/Results.vue';
     import InfiniteLoading from 'vue-infinite-loading';
 
     const post = new Post();
@@ -41,9 +50,10 @@
         },
 
         components: {
-            Search,
+            Show,
+            Filters,
+            Results,
             PostForm,
-            SearchResult,
             InfiniteLoading
         },
 
@@ -54,7 +64,7 @@
         },
 
         methods: {
-            async fetchPosts ($state) {
+            async fetchPosts($state) {
                 if (this.page < this.pagination.total_pages) {
                     this.page++;
 
@@ -77,7 +87,14 @@
                 this.activePost = post;
             },
 
-            destroyed (post) {
+            saved (post) {
+                this.$notify({
+                    message: 'Post saved successfully.',
+                    type: 'success'
+                });
+            },
+
+            deleted (post) {
                 this.activePost = {};
                 this.posts = _.reject(this.posts, { id: post.id });
             }

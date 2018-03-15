@@ -1,8 +1,9 @@
 <template>
-    <div class="post">
-        <a :href="post.url" class="post-title strong"><h5>{{ post.title }}</h5></a>
-        <p>{{ post.subtitle }}</p>
-        <footer class="blockquote-footer">
+    <article>
+        <h4 class="m-4">{{ post.title }}</h4>
+        <h6 class="m-4">{{ post.subtitle }}</h6>
+
+        <footer class="blockquote-footer m-4">
             by {{ post.author.name }}
             <cite title="Source Title" :class="{ 'text-success': post.is_published, 'text-info': !post.is_published }">
                 <span v-if="post.is_published">published on </span>
@@ -11,20 +12,32 @@
             </cite>
         </footer>
 
-        <div class="mt-2">
+        <div class="m-4">
             <tags-list :tags="post.tags.data"></tags-list>
         </div>
-    </div>
+
+        <div class="m-4">
+            <div v-html="compiledMarkdown"></div>
+        </div>
+
+    </article>
 </template>
 
 <script>
     import TagsList from './../tags/TagsList.vue';
+    import marked from 'marked';
 
     export default {
         props: {
             post: {
                 type: Object,
-                required: true
+                required:true
+            }
+        },
+
+        computed: {
+            compiledMarkdown: function () {
+                return marked(this.post.body, { sanitize: true })
             }
         },
 

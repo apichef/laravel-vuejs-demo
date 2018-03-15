@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "element-ui": "^2.1.0",
+        "marked": "^0.3.17",
         "moment": "^2.21.0",
         "sarala": "^0.2.1",
         "vue-infinite-loading": "^2.2.3"

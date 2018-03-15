@@ -9,27 +9,8 @@
     </section>
 </template>
 
-<style lang="scss">
-    @import "./../../../sass/variables";
-
-    .posts-list {
-        .list {
-            height: 75vh;
-            overflow: scroll;
-
-            .active {
-                border-left: 4px solid $color-main-lighter;
-            }
-        }
-
-        li {
-            cursor: pointer;
-        }
-    }
-</style>
-
 <script>
-    import PostSummery from './PostSummery.vue';
+    import PostSummery from './../PostSummery.vue';
 
     export default {
         props: {
@@ -48,3 +29,23 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import "../../../../sass/variables";
+
+    .posts-list {
+        .list {
+            height: 75vh;
+            overflow: scroll;
+
+            .active {
+                border-left: 4px solid $color-main;
+                background-color: $color-main-lighter;
+            }
+        }
+
+        li {
+            cursor: pointer;
+        }
+    }
+</style>

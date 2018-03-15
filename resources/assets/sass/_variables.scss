@@ -7,6 +7,17 @@ $color-main-dark: darken($color-main, 20%);
 $color-main-darker: darken($color-main, 40%);
 $color-main-darkest: darken($color-main, 60%);
 
+$color-second: #e63946;
+$color-second-lightest: lighten($color-second, 60%);
+$color-second-lighter: lighten($color-second, 50%);
+$color-second-light: lighten($color-second, 20%);
+$color-second-dark: darken($color-second, 20%);
+$color-second-darker: darken($color-second, 40%);
+$color-second-darkest: darken($color-second, 60%);
+
+// Links
+$link-color: $color-main-light;
+
 // Body
 $body-bg: #f5f8fa;
 
@@ -21,6 +32,8 @@ $navbar-default-bg: #fff;
 
 // Buttons
 $btn-default-color: $text-color;
+$input-btn-focus-box-shadow:  0;
+$btn-focus-box-shadow: 0;
 
 // Panels
 $panel-default-heading-bg: #fff;
