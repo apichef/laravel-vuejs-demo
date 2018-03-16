@@ -10,7 +10,8 @@ const state = {
     pagination: {
         total: 0,
         per_page: 8,
-        total_pages: 1
+        total_pages: 1,
+        current_page: 1
     }
 };
 
@@ -35,10 +36,19 @@ const actions = {
         }
     },
 
-    async savePost ({ commit }, post) {
+    async savePost ({ dispatch }, post) {
         await post.save();
+        await dispatch('updateList');
+    },
+    
+    async updateList ({ commit, state }) {
+        const result = await post.clone().with(['author', 'tags'])
+            .orderByDesc('published_at')
+            .filter('my')
+            .limit(state.pagination.per_page * state.pagination.current_page)
+            .get();
 
-        commit('updatePost', post);
+        commit('updateList', result.data);
     },
 
     async deletedPost ({ commit }, post) {
@@ -57,12 +67,7 @@ const mutations = {
         state.posts = _.concat(state.posts, posts);
     },
 
-    updatePost (state, post) {
-        let posts = _.clone(state.posts);
-        const found = _.find(posts, { id: post.id });
-        const index = _.indexOf(posts, found);
-        posts[index] = post;
-
+    updateList (state, posts) {
         state.posts = posts;
     },
 

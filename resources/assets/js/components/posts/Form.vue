@@ -34,6 +34,12 @@
             }
         },
 
+        watch: {
+            post (post) {
+                this.model = post.clone();
+            }
+        },
+
         created () {
             this.model = this.post.clone();
         },

@@ -105722,7 +105722,8 @@ var state = {
     pagination: {
         total: 0,
         per_page: 8,
-        total_pages: 1
+        total_pages: 1,
+        current_page: 1
     }
 };
 
@@ -105775,7 +105776,7 @@ var actions = {
     }(),
     savePost: function () {
         var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(_ref3, post) {
-            var commit = _ref3.commit;
+            var dispatch = _ref3.dispatch;
             return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
                 while (1) {
                     switch (_context2.prev = _context2.next) {
@@ -105784,10 +105785,10 @@ var actions = {
                             return post.save();
 
                         case 2:
+                            _context2.next = 4;
+                            return dispatch('updateList');
 
-                            commit('updatePost', post);
-
-                        case 3:
+                        case 4:
                         case 'end':
                             return _context2.stop();
                     }
@@ -105801,14 +105802,46 @@ var actions = {
 
         return savePost;
     }(),
-    deletedPost: function () {
-        var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee3(_ref5, post) {
-            var commit = _ref5.commit;
+    updateList: function () {
+        var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee3(_ref5) {
+            var commit = _ref5.commit,
+                state = _ref5.state;
+            var result;
             return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
                 while (1) {
                     switch (_context3.prev = _context3.next) {
                         case 0:
                             _context3.next = 2;
+                            return post.clone().with(['author', 'tags']).orderByDesc('published_at').filter('my').limit(state.pagination.per_page * state.pagination.current_page).get();
+
+                        case 2:
+                            result = _context3.sent;
+
+
+                            commit('updateList', result.data);
+
+                        case 4:
+                        case 'end':
+                            return _context3.stop();
+                    }
+                }
+            }, _callee3, this);
+        }));
+
+        function updateList(_x4) {
+            return _ref6.apply(this, arguments);
+        }
+
+        return updateList;
+    }(),
+    deletedPost: function () {
+        var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee4(_ref7, post) {
+            var commit = _ref7.commit;
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+                while (1) {
+                    switch (_context4.prev = _context4.next) {
+                        case 0:
+                            _context4.next = 2;
                             return post.delete();
 
                         case 2:
@@ -105817,14 +105850,14 @@ var actions = {
 
                         case 3:
                         case 'end':
-                            return _context3.stop();
+                            return _context4.stop();
                     }
                 }
-            }, _callee3, this);
+            }, _callee4, this);
         }));
 
-        function deletedPost(_x4, _x5) {
-            return _ref6.apply(this, arguments);
+        function deletedPost(_x5, _x6) {
+            return _ref8.apply(this, arguments);
         }
 
         return deletedPost;
@@ -105838,12 +105871,7 @@ var mutations = {
     addPosts: function addPosts(state, posts) {
         state.posts = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.concat(state.posts, posts);
     },
-    updatePost: function updatePost(state, post) {
-        var posts = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.clone(state.posts);
-        var found = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.find(posts, { id: post.id });
-        var index = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.indexOf(posts, found);
-        posts[index] = post;
-
+    updateList: function updateList(state, posts) {
         state.posts = posts;
     },
     updatePagination: function updatePagination(state, pagination) {
@@ -107912,19 +107940,19 @@ var Model = function () {
             return request;
         }()
     }, {
-        key: 'find',
+        key: 'get',
 
 
         // requests
 
         value: function () {
-            var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2(id) {
+            var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
                 var requestConfig, response;
                 return _regenerator2.default.wrap(function _callee2$(_context2) {
                     while (1) {
                         switch (_context2.prev = _context2.next) {
                             case 0:
-                                requestConfig = { method: 'GET', url: '' + this.resourceUrl() + id + this.queryBuilder.getQuery() };
+                                requestConfig = { method: 'GET', url: '' + this.resourceUrl() + this.queryBuilder.getQuery() };
 
                                 this.queryBuilder.reset();
                                 _context2.next = 4;
@@ -107942,22 +107970,22 @@ var Model = function () {
                 }, _callee2, this);
             }));
 
-            function find(_x2) {
+            function get() {
                 return _ref2.apply(this, arguments);
             }
 
-            return find;
+            return get;
         }()
     }, {
-        key: 'all',
+        key: 'find',
         value: function () {
-            var _ref3 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3() {
+            var _ref3 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee3(id) {
                 var requestConfig, response;
                 return _regenerator2.default.wrap(function _callee3$(_context3) {
                     while (1) {
                         switch (_context3.prev = _context3.next) {
                             case 0:
-                                requestConfig = { method: 'GET', url: '' + this.resourceUrl() + this.queryBuilder.getQuery() };
+                                requestConfig = { method: 'GET', url: '' + this.resourceUrl() + id + this.queryBuilder.getQuery() };
 
                                 this.queryBuilder.reset();
                                 _context3.next = 4;
@@ -107975,12 +108003,17 @@ var Model = function () {
                 }, _callee3, this);
             }));
 
-            function all() {
+            function find(_x2) {
                 return _ref3.apply(this, arguments);
             }
 
-            return all;
+            return find;
         }()
+    }, {
+        key: 'all',
+        value: function all() {
+            return this.get();
+        }
     }, {
         key: 'paginate',
         value: function () {
@@ -108295,6 +108328,16 @@ var Model = function () {
             var group = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
             return this.where(_filter, null, group);
+        }
+    }, {
+        key: 'limit',
+        value: function limit(_limit) {
+            return this.where('limit', _limit);
+        }
+    }, {
+        key: 'offset',
+        value: function offset(_offset) {
+            return this.where('offset', _offset);
         }
     }, {
         key: 'select',
@@ -116071,6 +116114,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         post: {
             type: Object,
             required: true
+        }
+    },
+
+    watch: {
+        post: function post(_post) {
+            this.model = _post.clone();
         }
     },
 
