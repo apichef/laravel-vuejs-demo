@@ -19,15 +19,29 @@
             label: {
                 type: String,
                 default: 'Save'
+            },
+
+            action: {
+                type: String,
+                default: null
             }
         },
 
         methods: {
             async save () {
                 this.saving = true;
-                await this.model.save();
-                this.saving = false;
 
+                if (this.action) {
+                    await this.$store.dispatch(this.action, this.model);
+                    this.reportParent();
+                } else {
+                    await this.model.save();
+                    this.reportParent();
+                }
+            },
+
+            reportParent () {
+                this.saving = false;
                 this.$emit('saved', this.model);
             }
         }

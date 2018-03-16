@@ -12883,7 +12883,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -13010,6 +13010,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -13022,6 +13023,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -13034,6 +13036,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -15092,6 +15095,11 @@ a.text-dark:focus {
   padding-left: 12px;
 }
 
+.el-pagination .el-pager li.disabled {
+  color: #c0c4cc;
+  cursor: not-allowed;
+}
+
 .el-pagination--small .btn-prev,
 .el-pagination--small .btn-next,
 .el-pagination--small .el-pager li,
@@ -15177,6 +15185,12 @@ a.text-dark:focus {
   border-radius: 2px;
 }
 
+.el-pagination.is-background .btn-prev.disabled,
+.el-pagination.is-background .btn-next.disabled,
+.el-pagination.is-background .el-pager li.disabled {
+  color: #c0c4cc;
+}
+
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .btn-next {
   padding: 0;
@@ -15187,11 +15201,11 @@ a.text-dark:focus {
   color: #c0c4cc;
 }
 
-.el-pagination.is-background .el-pager li:hover {
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
   color: #465975;
 }
 
-.el-pagination.is-background .el-pager li.active {
+.el-pagination.is-background .el-pager li:not(.disabled).active {
   background-color: #465975;
   color: #fff;
 }
@@ -15240,6 +15254,11 @@ a.text-dark:focus {
 .el-pager li.btn-quickprev {
   line-height: 28px;
   color: #303133;
+}
+
+.el-pager li.btn-quicknext.disabled,
+.el-pager li.btn-quickprev.disabled {
+  color: #c0c4cc;
 }
 
 .el-pager li.btn-quickprev:hover {
@@ -16677,7 +16696,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -16804,6 +16823,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -16816,6 +16836,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -16828,6 +16849,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -21184,7 +21206,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -21311,6 +21333,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -21323,6 +21346,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -21335,6 +21359,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -22281,7 +22306,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -22408,6 +22433,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -22420,6 +22446,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -22432,6 +22459,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -27539,7 +27567,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -27666,6 +27694,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -27678,6 +27707,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -27690,6 +27720,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -37398,7 +37429,17 @@ a.text-dark:focus {
 }
 
 .el-range-editor.el-input__inner {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3px 10px;
+}
+
+.el-range-editor .el-range-input {
+  line-height: 1;
 }
 
 .el-range-editor.is-active {
@@ -39456,7 +39497,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -39583,6 +39624,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -39595,6 +39637,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -39607,6 +39650,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -41506,7 +41550,17 @@ a.text-dark:focus {
 }
 
 .el-range-editor.el-input__inner {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3px 10px;
+}
+
+.el-range-editor .el-range-input {
+  line-height: 1;
 }
 
 .el-range-editor.is-active {
@@ -44004,7 +44058,17 @@ a.text-dark:focus {
 }
 
 .el-range-editor.el-input__inner {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3px 10px;
+}
+
+.el-range-editor .el-range-input {
+  line-height: 1;
 }
 
 .el-range-editor.is-active {
@@ -45132,7 +45196,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -45259,6 +45323,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -45271,6 +45336,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -45283,6 +45349,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -49633,7 +49700,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -49760,6 +49827,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -49772,6 +49840,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -49784,6 +49853,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -55115,7 +55185,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -55242,6 +55312,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -55254,6 +55325,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -55266,6 +55338,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -56288,6 +56361,19 @@ a.text-dark:focus {
 .el-slider__input {
   float: right;
   margin-top: 3px;
+  width: 130px;
+}
+
+.el-slider__input.el-input-number--mini {
+  margin-top: 5px;
+}
+
+.el-slider__input.el-input-number--medium {
+  margin-top: 0;
+}
+
+.el-slider__input.el-input-number--large {
+  margin-top: -2px;
 }
 
 .el-slider__bar {
@@ -67722,7 +67808,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -67849,6 +67935,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -67861,6 +67948,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -67873,6 +67961,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {
@@ -70161,7 +70250,7 @@ a.text-dark:focus {
   display: inline-block;
   font-size: inherit;
   height: 40px;
-  line-height: 1;
+  line-height: 40px;
   outline: none;
   padding: 0 15px;
   -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -70288,6 +70377,7 @@ a.text-dark:focus {
 
 .el-input--medium .el-input__inner {
   height: 36px;
+  line-height: 36px;
 }
 
 .el-input--medium .el-input__icon {
@@ -70300,6 +70390,7 @@ a.text-dark:focus {
 
 .el-input--small .el-input__inner {
   height: 32px;
+  line-height: 32px;
 }
 
 .el-input--small .el-input__icon {
@@ -70312,6 +70403,7 @@ a.text-dark:focus {
 
 .el-input--mini .el-input__inner {
   height: 28px;
+  line-height: 28px;
 }
 
 .el-input--mini .el-input__icon {

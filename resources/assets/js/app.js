@@ -1,5 +1,6 @@
 import Element from 'element-ui';
 import locale from 'element-ui/lib/locale/lang/en';
+import store from './store';
 
 require('./bootstrap');
 
@@ -15,5 +16,6 @@ Vue.component('save-button', require('./components/common/buttons/SaveButton.vue
 Vue.component('delete-button', require('./components/common/buttons/DeleteButton.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store
 });

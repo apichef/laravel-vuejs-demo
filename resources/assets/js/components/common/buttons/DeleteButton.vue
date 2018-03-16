@@ -24,6 +24,11 @@
             confirmMessage: {
                 type: String,
                 default: 'Are you sure you want to delete this?'
+            },
+
+            action: {
+                type: String,
+                default: null
             }
         },
 
@@ -42,7 +47,16 @@
             },
 
             async destroy () {
-                await this.model.delete();
+                if (this.action) {
+                    await this.$store.dispatch(this.action, this.model);
+                    this.reportParent();
+                } else {
+                    await this.model.delete();
+                    this.reportParent();
+                }
+            },
+
+            reportParent () {
                 this.destroying = false;
                 this.$emit('deleted', this.model);
             }
