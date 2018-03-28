@@ -1,7 +1,7 @@
 <template>
     <div class="search list-group list-group-flush mb-2">
-        <div class="cool-shadow list-group-item p-0">
-            <el-input placeholder="Search ..." v-model="query" suffix-icon="el-icon-search" :class="'cool-shadow'"></el-input>
+        <div class="cool-shadow border-0 list-group-item p-0">
+            <el-input placeholder="Search ..." v-model="query" suffix-icon="el-icon-search" class="cool-shadow border-0"></el-input>
         </div>
 
         <p class="mb-0 text-right"><small class="text-uppercase btn-advanced-search">advanced search <i class="el-icon-caret-bottom"></i></small></p>

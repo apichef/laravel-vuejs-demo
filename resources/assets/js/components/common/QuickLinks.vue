@@ -4,7 +4,7 @@
             <img src="/img/sarala-logo.svg" alt="sarala logo" class="logo">
         </div>
 
-        <div class="card cool-shadow">
+        <div class="card cool-shadow border-0">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="https://www.npmjs.com/package/sarala">Sarala.js</a></li>
                 <li class="list-group-item"><a href="https://www.npmjs.com/package/sarala-json-api-data-formatter">Sarala Formatter</a></li>

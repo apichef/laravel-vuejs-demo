@@ -15031,6 +15031,7 @@ a.text-dark:focus {
 .el-pagination .el-input__inner {
   text-align: center;
   -moz-appearance: textfield;
+  line-height: normal;
 }
 
 .el-pagination .el-input__suffix {
@@ -18906,6 +18907,11 @@ a.text-dark:focus {
 .el-button.is-round {
   border-radius: 20px;
   padding: 12px 23px;
+}
+
+.el-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
 }
 
 .el-button--primary {
@@ -30326,6 +30332,11 @@ a.text-dark:focus {
   padding: 12px 23px;
 }
 
+.el-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
+}
+
 .el-button--primary {
   color: #fff;
   background-color: #465975;
@@ -33373,7 +33384,7 @@ a.text-dark:focus {
 }
 
 .el-table--border.el-loading-parent--relative {
-  border: none;
+  border-color: transparent;
 }
 
 .el-table--border th,
@@ -36572,10 +36583,6 @@ a.text-dark:focus {
 
 .el-time-spinner.has-seconds .el-time-spinner__wrapper {
   width: 33.3%;
-}
-
-.el-time-spinner.has-seconds .el-time-spinner__wrapper:nth-child(2) {
-  margin-left: 1%;
 }
 
 .el-time-spinner__wrapper {
@@ -44341,12 +44348,295 @@ a.text-dark:focus {
 /* Break-point
 --------------------------*/
 
-.el-time-spinner.has-seconds .el-time-spinner__wrapper {
-  width: 33.3%;
+.el-picker-panel {
+  color: #606266;
+  border: 1px solid #e4e7ed;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 0;
+  line-height: 30px;
+  margin: 5px 0;
 }
 
-.el-time-spinner.has-seconds .el-time-spinner__wrapper:nth-child(2) {
-  margin-left: 1%;
+.el-picker-panel__body::after,
+.el-picker-panel__body-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.el-picker-panel__content {
+  position: relative;
+  margin: 15px;
+}
+
+.el-picker-panel__footer {
+  border-top: 1px solid #e4e4e4;
+  padding: 4px;
+  text-align: right;
+  background-color: #fff;
+  position: relative;
+  font-size: 0;
+}
+
+.el-picker-panel__shortcut {
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  line-height: 28px;
+  font-size: 14px;
+  color: #606266;
+  padding-left: 12px;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+}
+
+.el-picker-panel__shortcut:hover {
+  color: #465975;
+}
+
+.el-picker-panel__shortcut.active {
+  background-color: #e6f1fe;
+  color: #465975;
+}
+
+.el-picker-panel__btn {
+  border: 1px solid #dcdcdc;
+  color: #333;
+  line-height: 24px;
+  border-radius: 2px;
+  padding: 0 20px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  font-size: 12px;
+}
+
+.el-picker-panel__btn[disabled] {
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.el-picker-panel__icon-btn {
+  font-size: 12px;
+  color: #303133;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  margin-top: 8px;
+}
+
+.el-picker-panel__icon-btn:hover {
+  color: #465975;
+}
+
+.el-picker-panel__icon-btn.is-disabled {
+  color: #bbb;
+}
+
+.el-picker-panel__icon-btn.is-disabled:hover {
+  cursor: not-allowed;
+}
+
+.el-picker-panel__link-btn {
+  vertical-align: middle;
+}
+
+.el-picker-panel *[slot=sidebar],
+.el-picker-panel__sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  border-right: 1px solid #e4e4e4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.el-picker-panel *[slot=sidebar] + .el-picker-panel__body,
+.el-picker-panel__sidebar + .el-picker-panel__body {
+  margin-left: 110px;
+}
+
+/* Element Chalk Variables */
+
+/* Transition
+-------------------------- */
+
+/* Colors
+-------------------------- */
+
+/* 53a8ff */
+
+/* 66b1ff */
+
+/* 79bbff */
+
+/* 8cc5ff */
+
+/* a0cfff */
+
+/* b3d8ff */
+
+/* c6e2ff */
+
+/* d9ecff */
+
+/* ecf5ff */
+
+/* Link
+-------------------------- */
+
+/* Background
+-------------------------- */
+
+/* Border
+-------------------------- */
+
+/* Box-shadow
+-------------------------- */
+
+/* Fill
+-------------------------- */
+
+/* Font
+-------------------------- */
+
+/* Size
+-------------------------- */
+
+/* z-index
+-------------------------- */
+
+/* Disable base
+-------------------------- */
+
+/* Icon
+-------------------------- */
+
+/* Checkbox
+-------------------------- */
+
+/* Radio
+-------------------------- */
+
+/* Select
+-------------------------- */
+
+/* Alert
+-------------------------- */
+
+/* Message Box
+-------------------------- */
+
+/* Message
+-------------------------- */
+
+/* Notification
+-------------------------- */
+
+/* Input
+-------------------------- */
+
+/* Cascader
+-------------------------- */
+
+/* Group
+-------------------------- */
+
+/* Tab
+-------------------------- */
+
+/* Button
+-------------------------- */
+
+/* cascader
+-------------------------- */
+
+/* Switch
+-------------------------- */
+
+/* Dialog
+-------------------------- */
+
+/* Table
+-------------------------- */
+
+/* Pagination
+-------------------------- */
+
+/* Popover
+-------------------------- */
+
+/* Tooltip
+-------------------------- */
+
+/* Tag
+-------------------------- */
+
+/* Tree
+-------------------------- */
+
+/* Dropdown
+-------------------------- */
+
+/* Badge
+-------------------------- */
+
+/* Card
+--------------------------*/
+
+/* Slider
+--------------------------*/
+
+/* Steps
+--------------------------*/
+
+/* Menu
+--------------------------*/
+
+/* Rate
+--------------------------*/
+
+/* DatePicker
+--------------------------*/
+
+/* Loading
+--------------------------*/
+
+/* Scrollbar
+--------------------------*/
+
+/* Carousel
+--------------------------*/
+
+/* Collapse
+--------------------------*/
+
+/* Transfer
+--------------------------*/
+
+/* Header
+  --------------------------*/
+
+/* Footer
+--------------------------*/
+
+/* Main
+--------------------------*/
+
+/* Break-point
+--------------------------*/
+
+.el-time-spinner.has-seconds .el-time-spinner__wrapper {
+  width: 33.3%;
 }
 
 .el-time-spinner__wrapper {
@@ -44706,6 +44996,207 @@ a.text-dark:focus {
 .el-time-panel__btn.confirm {
   font-weight: 800;
   color: #465975;
+}
+
+/* Element Chalk Variables */
+
+/* Transition
+-------------------------- */
+
+/* Colors
+-------------------------- */
+
+/* 53a8ff */
+
+/* 66b1ff */
+
+/* 79bbff */
+
+/* 8cc5ff */
+
+/* a0cfff */
+
+/* b3d8ff */
+
+/* c6e2ff */
+
+/* d9ecff */
+
+/* ecf5ff */
+
+/* Link
+-------------------------- */
+
+/* Background
+-------------------------- */
+
+/* Border
+-------------------------- */
+
+/* Box-shadow
+-------------------------- */
+
+/* Fill
+-------------------------- */
+
+/* Font
+-------------------------- */
+
+/* Size
+-------------------------- */
+
+/* z-index
+-------------------------- */
+
+/* Disable base
+-------------------------- */
+
+/* Icon
+-------------------------- */
+
+/* Checkbox
+-------------------------- */
+
+/* Radio
+-------------------------- */
+
+/* Select
+-------------------------- */
+
+/* Alert
+-------------------------- */
+
+/* Message Box
+-------------------------- */
+
+/* Message
+-------------------------- */
+
+/* Notification
+-------------------------- */
+
+/* Input
+-------------------------- */
+
+/* Cascader
+-------------------------- */
+
+/* Group
+-------------------------- */
+
+/* Tab
+-------------------------- */
+
+/* Button
+-------------------------- */
+
+/* cascader
+-------------------------- */
+
+/* Switch
+-------------------------- */
+
+/* Dialog
+-------------------------- */
+
+/* Table
+-------------------------- */
+
+/* Pagination
+-------------------------- */
+
+/* Popover
+-------------------------- */
+
+/* Tooltip
+-------------------------- */
+
+/* Tag
+-------------------------- */
+
+/* Tree
+-------------------------- */
+
+/* Dropdown
+-------------------------- */
+
+/* Badge
+-------------------------- */
+
+/* Card
+--------------------------*/
+
+/* Slider
+--------------------------*/
+
+/* Steps
+--------------------------*/
+
+/* Menu
+--------------------------*/
+
+/* Rate
+--------------------------*/
+
+/* DatePicker
+--------------------------*/
+
+/* Loading
+--------------------------*/
+
+/* Scrollbar
+--------------------------*/
+
+/* Carousel
+--------------------------*/
+
+/* Collapse
+--------------------------*/
+
+/* Transfer
+--------------------------*/
+
+/* Header
+  --------------------------*/
+
+/* Footer
+--------------------------*/
+
+/* Main
+--------------------------*/
+
+/* Break-point
+--------------------------*/
+
+.el-time-range-picker {
+  width: 354px;
+  overflow: visible;
+}
+
+.el-time-range-picker__content {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+.el-time-range-picker__cell {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 4px 7px 7px;
+  width: 50%;
+  display: inline-block;
+}
+
+.el-time-range-picker__header {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.el-time-range-picker__body {
+  border-radius: 2px;
+  border: 1px solid #e4e7ed;
 }
 
 /* BEM support Func
@@ -48711,6 +49202,11 @@ a.text-dark:focus {
   padding: 12px 23px;
 }
 
+.el-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
+}
+
 .el-button--primary {
   color: #fff;
   background-color: #465975;
@@ -51108,6 +51604,10 @@ a.text-dark:focus {
   clear: both;
 }
 
+.el-form-item__content .el-input-group {
+  vertical-align: middle;
+}
+
 .el-form-item__error {
   color: #f56c6c;
   font-size: 12px;
@@ -53128,6 +53628,7 @@ a.text-dark:focus {
 --------------------------*/
 
 .el-tree {
+  position: relative;
   cursor: default;
   background: #fff;
   color: #606266;
@@ -53150,6 +53651,14 @@ a.text-dark:focus {
   color: #724f3b;
 }
 
+.el-tree__drop-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #465975;
+}
+
 .el-tree-node {
   white-space: nowrap;
   outline: none;
@@ -53161,6 +53670,11 @@ a.text-dark:focus {
 
 .el-tree-node:focus > .el-tree-node__content {
   background-color: #f5f7fa;
+}
+
+.el-tree-node.is-drop-inner > .el-tree-node__content .el-tree-node__label {
+  background-color: #465975;
+  color: #fff;
 }
 
 .el-tree-node__content {
@@ -53184,6 +53698,18 @@ a.text-dark:focus {
 
 .el-tree-node__content:hover {
   background-color: #f5f7fa;
+}
+
+.el-tree.is-dragging .el-tree-node__content {
+  cursor: move;
+}
+
+.el-tree.is-dragging .el-tree-node__content * {
+  pointer-events: none;
+}
+
+.el-tree.is-dragging.is-drop-not-allow .el-tree-node__content {
+  cursor: not-allowed;
 }
 
 .el-tree-node__expand-icon {
@@ -69053,6 +69579,55 @@ a.text-dark:focus {
 /* Break-point
 --------------------------*/
 
+.el-color-predefine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  margin-top: 8px;
+  width: 280px;
+}
+
+.el-color-predefine__colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.el-color-predefine__color-selector {
+  margin: 0 0 8px 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.el-color-predefine__color-selector:nth-child(10n + 1) {
+  margin-left: 0;
+}
+
+.el-color-predefine__color-selector.selected {
+  -webkit-box-shadow: 0 0 3px 2px #465975;
+          box-shadow: 0 0 3px 2px #465975;
+}
+
+.el-color-predefine__color-selector > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.el-color-predefine__color-selector.is-alpha {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==);
+}
+
 .el-color-hue-slider {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -71148,6 +71723,11 @@ a.text-dark:focus {
 .el-button.is-round {
   border-radius: 20px;
   padding: 12px 23px;
+}
+
+.el-button.is-circle {
+  border-radius: 50%;
+  padding: 12px;
 }
 
 .el-button--primary {
@@ -74290,10 +74870,8 @@ button:focus {
 }
 
 .cool-shadow {
-  background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  border: none;
 }
 
 .el-form--label-top .el-form-item__label {

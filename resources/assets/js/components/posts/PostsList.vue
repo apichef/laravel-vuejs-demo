@@ -1,6 +1,6 @@
 <template>
     <article>
-        <div v-for="post in posts" :key="post.id" class="card cool-shadow mb-4">
+        <div v-for="post in posts" :key="post.id" class="card cool-shadow border-0 mb-4">
             <div class="card-body">
                 <post-summery :post="post"></post-summery>
             </div>

@@ -10,7 +10,7 @@
         </el-col>
 
         <el-col :span="16">
-            <el-tabs v-if="hasActivePost" type="border-card" :class="'cool-shadow'">
+            <el-tabs v-if="hasActivePost" type="border-card" class="cool-shadow border-0">
                 <el-tab-pane label="Preview">
                     <show :post="activePost"></show>
                 </el-tab-pane>
@@ -18,7 +18,7 @@
                     <post-form :post="activePost" @saved="saved"></post-form>
                 </el-tab-pane>
             </el-tabs>
-            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" :class="'cool-shadow'" show-icon v-else></el-alert>
+            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" class="cool-shadow border-0" show-icon v-else></el-alert>
         </el-col>
 
     </el-row>
