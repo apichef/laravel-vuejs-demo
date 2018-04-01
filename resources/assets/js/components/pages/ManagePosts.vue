@@ -2,11 +2,19 @@
     <el-row :gutter="20">
 
         <el-col :span="8">
-            <filters></filters>
+            <section class="cool-shadow">
+                <filters></filters>
 
-            <results :posts="posts" :active-post="activePost" @selected="setActivePost">
-                <infinite-loading @infinite="fetchPosts"></infinite-loading>
-            </results>
+                <results :posts="posts" :active-post="activePost" @selected="setActivePost">
+                    <infinite-loading @infinite="fetchPosts"></infinite-loading>
+                </results>
+
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item p-2 text-center small">
+                        <p class="mb-0">{{ posts.length }} of {{ pagination.total }} loaded.</p>
+                    </div>
+                </div>
+            </section>
         </el-col>
 
         <el-col :span="16">
@@ -18,7 +26,7 @@
                     <post-form :post="activePost" @saved="saved"></post-form>
                 </el-tab-pane>
             </el-tabs>
-            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" class="cool-shadow border-0" show-icon v-else></el-alert>
+            <el-alert title="Select a post from left side panel to make changes." type="info" :closable="false" class="cool-shadow border" show-icon v-else></el-alert>
         </el-col>
 
     </el-row>

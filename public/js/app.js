@@ -114999,6 +114999,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -116926,7 +116934,7 @@ exports = module.exports = __webpack_require__(36)(false);
 
 
 // module
-exports.push([module.i, "\n.search input {\n  border: 1px solid #d4dbe6;\n  background-color: #f4f6f9;\n}\n.search .btn-advanced-search {\n  background-color: #d4dbe6;\n  padding: 4px 6px;\n  color: #465975;\n  font-size: 10px;\n  position: relative;\n  top: -3px;\n  border-radius: 0px 0px 6px 6px;\n}\n", ""]);
+exports.push([module.i, "\n.search input {\n  border: none;\n}\n.search .el-icon-setting {\n  cursor: pointer;\n}\n.search .el-input-group__append {\n  background-color: white;\n  border: none;\n}\n.search .el-input-group__append .el-icon-setting {\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -116953,6 +116961,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             query: ''
         };
+    },
+
+
+    methods: {
+        showAdwansedOptions: function showAdwansedOptions() {
+            alert("show");
+        }
     }
 });
 
@@ -116964,42 +116979,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "search list-group list-group-flush mb-2" }, [
-    _c(
-      "div",
-      { staticClass: "cool-shadow border-0 list-group-item p-0" },
-      [
-        _c("el-input", {
-          staticClass: "cool-shadow border-0",
-          attrs: { placeholder: "Search ...", "suffix-icon": "el-icon-search" },
-          model: {
-            value: _vm.query,
-            callback: function($$v) {
-              _vm.query = $$v
+  return _c(
+    "div",
+    {
+      staticClass: "search list-group list-group-flush bg-white border-bottom"
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "ist-group-item p-2" },
+        [
+          _c(
+            "el-input",
+            {
+              attrs: { placeholder: "Search ..." },
+              model: {
+                value: _vm.query,
+                callback: function($$v) {
+                  _vm.query = $$v
+                },
+                expression: "query"
+              }
             },
-            expression: "query"
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _vm._m(0)
-  ])
+            [
+              _c("template", { slot: "append" }, [
+                _c("i", {
+                  staticClass: "el-icon-setting",
+                  on: { click: _vm.showAdwansedOptions }
+                })
+              ])
+            ],
+            2
+          )
+        ],
+        1
+      )
+    ]
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "mb-0 text-right" }, [
-      _c("small", { staticClass: "text-uppercase btn-advanced-search" }, [
-        _vm._v("advanced search "),
-        _c("i", { staticClass: "el-icon-caret-bottom" })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -117147,7 +117165,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "cool-shadow border-0 posts-list" }, [
+  return _c("section", { staticClass: "border-0 posts-list" }, [
     _c(
       "div",
       { staticClass: "list list-group list-group-flush" },
@@ -117205,24 +117223,43 @@ var render = function() {
     "el-row",
     { attrs: { gutter: 20 } },
     [
-      _c(
-        "el-col",
-        { attrs: { span: 8 } },
-        [
-          _c("filters"),
-          _vm._v(" "),
-          _c(
-            "results",
-            {
-              attrs: { posts: _vm.posts, "active-post": _vm.activePost },
-              on: { selected: _vm.setActivePost }
-            },
-            [_c("infinite-loading", { on: { infinite: _vm.fetchPosts } })],
-            1
-          )
-        ],
-        1
-      ),
+      _c("el-col", { attrs: { span: 8 } }, [
+        _c(
+          "section",
+          { staticClass: "cool-shadow" },
+          [
+            _c("filters"),
+            _vm._v(" "),
+            _c(
+              "results",
+              {
+                attrs: { posts: _vm.posts, "active-post": _vm.activePost },
+                on: { selected: _vm.setActivePost }
+              },
+              [_c("infinite-loading", { on: { infinite: _vm.fetchPosts } })],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "list-group list-group-flush" }, [
+              _c(
+                "div",
+                { staticClass: "list-group-item p-2 text-center small" },
+                [
+                  _c("p", { staticClass: "mb-0" }, [
+                    _vm._v(
+                      _vm._s(_vm.posts.length) +
+                        " of " +
+                        _vm._s(_vm.pagination.total) +
+                        " loaded."
+                    )
+                  ])
+                ]
+              )
+            ])
+          ],
+          1
+        )
+      ]),
       _vm._v(" "),
       _c(
         "el-col",
@@ -117258,7 +117295,7 @@ var render = function() {
                 1
               )
             : _c("el-alert", {
-                staticClass: "cool-shadow border-0",
+                staticClass: "cool-shadow border",
                 attrs: {
                   title: "Select a post from left side panel to make changes.",
                   type: "info",

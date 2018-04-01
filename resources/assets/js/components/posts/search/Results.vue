@@ -1,5 +1,5 @@
 <template>
-    <section class="cool-shadow border-0 posts-list">
+    <section class="border-0 posts-list">
         <div class="list list-group list-group-flush">
             <div class="list-group-item" v-for="post in posts" :key="post.id" @click.prevent="$emit('selected', post)" :class="{ active: post.id === activePost.id }">
                 <post-summery :post="post"></post-summery>
