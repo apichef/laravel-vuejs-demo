@@ -55,6 +55,14 @@ const actions = {
         await post.delete();
 
         commit('deletedPost', post);
+    },
+
+    async syncPostTags ({ commit }, { post, tags }) {
+        let samePost = post.clone();
+        samePost.tags.data = tags;
+        await samePost.sync('tags');
+
+        commit('replacePost', samePost);
     }
 };
 
@@ -81,6 +89,11 @@ const mutations = {
 
     setActivePost (state, post) {
         state.activePost = post;
+    },
+
+    replacePost (state, post) {
+        let index = _.findIndex(state.posts, { id: post.id });
+        state.posts.splice(index, 1, post);
     }
 };
 

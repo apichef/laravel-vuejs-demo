@@ -1,41 +1,43 @@
 <template>
-    <section>
-        <label>Tags</label>
-        <br>
+    <el-form-item label="Tags">
         <el-select @change="change" v-model="selectedTags" value-key="id" placeholder="Choose tags for your article" multiple filterable>
             <el-option v-for="tag in tags" :key="tag.id" :label="tag.name" :value="tag"></el-option>
         </el-select>
-    </section>
+    </el-form-item>
 </template>
 
 <script>
     import _ from 'lodash';
 
-    import Tag from './../../models/Tag';
-    import Post from './../../models/Post';
+    import Tag from '../../models/Tag';
+    import Post from '../../models/Post';
 
     let tag = new Tag();
-    let post = new Post();
 
     export default {
         props: {
-            postId: {
+            post: {
                 require: true,
-                type: String
+                type: Object
             }
         },
 
         data() {
             return {
                 tags: [],
-                selectedTags: [],
-                post: {}
+                selectedTags: []
             }
         },
 
         created () {
             this.fetchTags();
-            this.fetchPost(this.postId);
+            this.setSelectedTags();
+        },
+
+        watch: {
+            post () {
+                this.setSelectedTags();
+            }
         },
 
         methods: {
@@ -44,19 +46,23 @@
                 this.tags = result.data;
             },
 
-            async fetchPost (id) {
-                let result = await post.with(['tags']).select({
-                    posts: [],
-                    tags: []
-                }).find(id);
-                this.post = result;
-                this.selectedTags = result.tags.data;
+            async setSelectedTags () {
+                this.selectedTags = this.post.tags.data;
             },
 
-            change (data) {
-                this.post.tags.data = data;
-                this.post.sync('tags');
+            change (tags) {
+                this.$store.dispatch('manage/syncPostTags', { post: this.post, tags: tags});
             }
         }
     }
 </script>
+
+<style lang="scss">
+    .el-select {
+        width: 100%;
+
+        .el-select__tags {
+            width: 100%;
+        }
+    }
+</style>

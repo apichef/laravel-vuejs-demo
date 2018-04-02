@@ -12,6 +12,7 @@
         <el-form-item label="Body">
             <el-input type="textarea" v-model="model.body" :rows="10"></el-input>
         </el-form-item>
+        <post-tags :post="post"></post-tags>
         <el-form-item class="m-0">
             <save-button :model="model" @saved="saved" action="manage/savePost"></save-button>
             <delete-button :model="model" action="manage/deletedPost"></delete-button>
@@ -20,6 +21,8 @@
 </template>
 
 <script>
+    import PostTags from './PostTags.vue';
+
     export default {
         data () {
             return {
@@ -32,6 +35,10 @@
                 type: Object,
                 required: true
             }
+        },
+
+        components: {
+            PostTags
         },
 
         watch: {
