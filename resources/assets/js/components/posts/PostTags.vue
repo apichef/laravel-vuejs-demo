@@ -8,11 +8,7 @@
 
 <script>
     import _ from 'lodash';
-
-    import Tag from '../../models/Tag';
-    import Post from '../../models/Post';
-
-    let tag = new Tag();
+    import { mapState, mapActions } from 'vuex';
 
     export default {
         props: {
@@ -24,9 +20,14 @@
 
         data() {
             return {
-                tags: [],
                 selectedTags: []
             }
+        },
+
+        computed: {
+            ...mapState('tags', {
+                tags: 'all'
+            })
         },
 
         created () {
@@ -41,17 +42,20 @@
         },
 
         methods: {
-            async fetchTags () {
-                let result = await tag.all();
-                this.tags = result.data;
-            },
+            ...mapActions('tags', {
+                fetchTags: 'fetchAll'
+            }),
+
+            ...mapActions('manage', [
+                'syncPostTags'
+            ]),
 
             async setSelectedTags () {
                 this.selectedTags = this.post.tags.data;
             },
 
             change (tags) {
-                this.$store.dispatch('manage/syncPostTags', { post: this.post, tags: tags});
+                this.syncPostTags({ post: this.post, tags: tags});
             }
         }
     }

@@ -33,7 +33,7 @@
 </template>
 
 <script>
-    import { createNamespacedHelpers } from 'vuex';
+    import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
     import Show from './../posts/Show.vue';
     import PostForm from './../posts/Form.vue';
@@ -41,8 +41,6 @@
     import Results from './../posts/search/Results.vue';
 
     import InfiniteLoading from 'vue-infinite-loading';
-
-    const { mapState, mapGetters, mapMutations } = createNamespacedHelpers('manage');
 
     export default {
         components: {
@@ -54,15 +52,28 @@
         },
 
         computed: {
-            ...mapState(['posts', 'activePost', 'pagination']),
-            ...mapGetters(['hasActivePost'])
+            ...mapState('manage', [
+                'posts',
+                'activePost',
+                'pagination'
+            ]),
+
+            ...mapGetters('manage', [
+                'hasActivePost'
+            ])
         },
 
         methods: {
-            ...mapMutations(['setActivePost']),
+            ...mapMutations('manage', [
+                'setActivePost'
+            ]),
+
+            ...mapActions('manage', [
+                'fetchNext'
+            ]),
 
             async fetchPosts($state) {
-                await this.$store.dispatch('manage/fetchNext');
+                await this.fetchNext();
                 $state.loaded();
 
                 if (this.posts.length === this.pagination.total) {
